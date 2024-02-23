@@ -1,17 +1,27 @@
-<h1>Title</h1>
-<h2> {{ example_text }}</h2>
-<ul>
-    <li *ngFor="let task of tasks">
-        {{ task }}
-    </li>
-</ul>
-<hr>
-<h1>Property Binding</h1>
-<input type="text" [value]="input_value">
-<button [disabled]="button_disabled"> {{ button_text }}</button>
-<img [src]="image_url" alt="">
-<hr>
-<h1>Property Binding With Objects</h1>
-<p>Profile Name: {{ profile.name }}</p>
-<p>Profile Age: {{ profile.age }}</p>
-<p>Profile Image: <img [src]="profile.image_url" alt=""></p>
+<div class="container">
+    <h1>Title</h1>
+    <h2> {{ example_text }}</h2>
+    <ul>
+        <li *ngFor="let task of tasks">
+            {{ task }}
+        </li>
+    </ul>
+    <hr>
+    <h1>Property Binding</h1>
+    <input type="text" [value]="input_value">
+    <button [disabled]="button_disabled"> {{ button_text }}</button>
+    <img [src]="image_url" alt="">
+    <hr>
+    <h1>Property Binding With Objects</h1>
+    <p>Profile Name: {{ profile.name }}</p>
+    <p>Profile Age: {{ profile.age }}</p>
+    <p>Profile Image: <img [src]="profile.image_url" alt=""></p>
+    <hr>
+    <h1>Event Binding</h1>
+    <button (click)="click_handler()">Click Me!</button>
+    <button (dblclick)="click_handler()">Double Click Me!</button>
+
+
+    <input type="number" [placeholder]="change_event_placeholder" (change)="change_handler($event)" [value]="counter">
+    <p>Current Counter: {{ counter }}</p>
+</div>
