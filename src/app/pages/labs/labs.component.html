@@ -5,3 +5,13 @@
         {{ task }}
     </li>
 </ul>
+<hr>
+<h1>Property Binding</h1>
+<input type="text" [value]="input_value">
+<button [disabled]="button_disabled"> {{ button_text }}</button>
+<img [src]="image_url" alt="">
+<hr>
+<h1>Property Binding With Objects</h1>
+<p>Profile Name: {{ profile.name }}</p>
+<p>Profile Age: {{ profile.age }}</p>
+<p>Profile Image: <img [src]="profile.image_url" alt=""></p>
