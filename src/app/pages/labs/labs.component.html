@@ -23,7 +23,9 @@
 
 
     <input type="number" [placeholder]="change_event_placeholder" (change)="change_handler($event)" [value]="counter">
-    <p>Current Counter: {{ counter }}</p>
+
+    <!-- Obtener el valor de una Signal -->
+    <p>Current Counter: {{ counter() }}</p>
 
     <hr>
     <input type="text" [placeholder]="keydown_event_placeholder" (keydown)="keydown_handler($event)">

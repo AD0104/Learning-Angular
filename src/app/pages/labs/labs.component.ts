@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-labs',
@@ -17,7 +17,8 @@ export class LabsComponent {
   image_url = "https://w3schools.com/howto/img_avatar.png";
   change_event_placeholder = "Enter a number";
   keydown_event_placeholder = "Enter new text";
-  counter = 0;
+  //Modificado para ser una Signal
+  counter = signal(0);
   profile = {
     name: "Adrian",
     age: 22,
@@ -31,7 +32,8 @@ export class LabsComponent {
   change_handler(event: Event) {
     console.log("Event triggered")
     console.log(event);
-    this.counter++;
+    //Cambiando el valor de una Signal
+    this.counter.set(this.counter() + 1);
   }
 
   keydown_handler(event: KeyboardEvent) {
