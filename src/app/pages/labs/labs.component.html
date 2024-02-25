@@ -31,4 +31,12 @@
     <input type="text" [placeholder]="keydown_event_placeholder" (keydown)="keydown_handler($event)">
     <input type="text" [placeholder]="keydown_event_placeholder" (keydown.shift.t)="click_handler()">
 
+    <hr>
+    <h1>Signals</h1>
+    <p>Tasks Length: {{ tasks_signal().length }}</p>
+    <ul>
+        <li *ngFor="let task of tasks_signal(); index as i">
+            {{ i }} {{ task }}
+        </li>
+    </ul>
 </div>

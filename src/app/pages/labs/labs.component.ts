@@ -11,6 +11,7 @@ import { Component, signal } from '@angular/core';
 export class LabsComponent {
   example_text = 'example text';
   tasks = ['Task 1', 'Task 2', 'Task 3'];
+  tasks_signal = signal(['Task 1', 'Task 2', 'Task 3']);
   input_value = "Input Value";
   button_disabled = false;
   button_text = "Button Text";
